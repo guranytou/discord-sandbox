@@ -11,6 +11,10 @@ provider "discord" {
   token = var.token
 }
 
+variable "token" {
+  type = string
+}
+
 resource "discord_server" "my_server" {
   name              = "gurany_touのサーバー"
   region            = "japan"
