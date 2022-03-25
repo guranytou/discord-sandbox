@@ -18,6 +18,13 @@ resource "discord_text_channel" "test" {
   position  = 0
 }
 
+resource "discord_text_channel" "test1" {
+  name      = "test_channne2"
+  server_id = discord_server.my_server.id
+  category  = discord_category_channel.textchannel.id
+  position  = 0
+}
+
 resource "discord_category_channel" "voicechannel" {
   name      = "Voice Channels"
   server_id = discord_server.my_server.id
