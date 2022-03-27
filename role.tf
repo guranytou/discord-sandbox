@@ -18,3 +18,13 @@ data "discord_permission" "member" {
 data "discord_color" "blue" {
   hex = "#4287f5"
 }
+
+# resource "discord_role" "bad_role" {
+#   server_id   = discord_server.my_server.id
+#   name        = "bad_role"
+#   permissions = data.discord_permission.member.allow_bits
+#   color       = data.discord_color.blue.dec
+#   hoist       = true
+#   mentionable = true
+#   position    = 1
+# }

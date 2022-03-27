@@ -50,3 +50,10 @@ resource "discord_voice_channel" "general" {
   category  = discord_category_channel.voicechannel.id
   position  = 0
 }
+
+resource "discord_voice_channel" "genera2" {
+  name      = "General2"
+  server_id = discord_server.my_server.id
+  category  = discord_category_channel.voicechannel.id
+  position  = 1
+}
