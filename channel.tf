@@ -25,11 +25,17 @@ resource "discord_text_channel" "test1" {
   position  = 0
 }
 
+data "discord_permission" "test_channel" {
+  view_channel  = "allow"
+  send_messages = "deny"
+}
+
 resource "discord_channel_permission" "chatting" {
   channel_id   = discord_text_channel.test1.id
   type         = "role"
   overwrite_id = discord_role.test_role1.id
-  allow        = data.discord_permission.member.allow_bits
+  allow        = data.discord_permission.test_channel.allow_bits
+  deny         = data.discord_permission.test_channel.deny_bits
 }
 
 resource "discord_category_channel" "voicechannel" {
