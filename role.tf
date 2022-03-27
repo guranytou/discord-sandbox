@@ -5,7 +5,7 @@ resource "discord_role" "test_role1" {
   color       = data.discord_color.blue.dec
   hoist       = true
   mentionable = true
-  position    = 0
+  position    = 1
 }
 
 data "discord_permission" "member" {
