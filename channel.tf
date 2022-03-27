@@ -19,10 +19,11 @@ resource "discord_text_channel" "test" {
 }
 
 resource "discord_text_channel" "test1" {
-  name      = "test_channne3"
-  server_id = discord_server.my_server.id
-  category  = discord_category_channel.textchannel.id
-  position  = 0
+  name                     = "test_channne3"
+  server_id                = discord_server.my_server.id
+  category                 = discord_category_channel.textchannel.id
+  position                 = 0
+  sync_perms_with_category = false
 }
 
 data "discord_permission" "test_channel" {
@@ -36,6 +37,14 @@ resource "discord_channel_permission" "chatting" {
   overwrite_id = discord_role.test_role1.id
   allow        = data.discord_permission.test_channel.allow_bits
   deny         = data.discord_permission.test_channel.deny_bits
+}
+
+
+resource "discord_channel_permission" "bad" {
+  channel_id   = discord_text_channel.test1.id
+  type         = "role"
+  overwrite_id = discord_role.bad_role.id
+  deny         = data.discord_permission.bad.deny_bits
 }
 
 resource "discord_category_channel" "voicechannel" {

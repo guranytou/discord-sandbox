@@ -30,5 +30,9 @@ resource "discord_role" "bad_role" {
 }
 
 data "discord_color" "bad" {
-    hex = "#e65323"
+  hex = "#e65323"
+}
+
+data "discord_permission" "bad" {
+  view_channel = "deny"
 }
