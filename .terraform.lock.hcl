@@ -5,6 +5,7 @@ provider "registry.terraform.io/aequasi/discord" {
   version     = "0.0.4"
   constraints = "0.0.4"
   hashes = [
+    "h1:U/3walzuHj8k2xEnrJA3HtsIoNvrY0kN7ClJ2Wv+AbA=",
     "h1:U0tQxw5ybfHU+BXRyYRfDhw5Ux9rcBSo1GXXr6MC5b0=",
     "zh:1f1275bf9b81b817755f8a00cb8f2126c9c3943846ec2332f4a746e3b012f42d",
     "zh:3996ae828a6030360d2562c4306851b6ffa94107e0bbe579c5b2c94f57439d8b",
