@@ -25,7 +25,11 @@ provider "registry.terraform.io/lucky3028/discord" {
   version     = "1.0.8"
   constraints = "1.0.8"
   hashes = [
+    "h1:2jF3NGWe5t3b2lyk9Jom9EaXWGa8jJnlh7LK2uo621Q=",
+    "h1:4maj6n/eBDE8A0TZb6/vhPoGkbQtyjy2aAmyRL4AF6M=",
     "h1:YHEKbNbXSP2JddFQhBjUDo5rBRD0E+y/Vhg338Xg8lw=",
+    "h1:YV2Ku8vm7svqmeXOVouq9KarhU9TTlJWY9xVmZ3MYNk=",
+    "h1:gtcV9vLt+2ElAo7sGp5GWO6jSaAqiv6g7sdbwWobObs=",
     "zh:4180513c83c4a2f55ea0309ac1aa25b076e9fee7059555c97e01af562415fb64",
     "zh:67c34feede7c8bb28569f8fbded846a9463dfcd37b2851b8dc1b8e46e9275618",
     "zh:788a50a1a4ccd1af12e80e1c2d1990cffe8ad0123f2ef4917dd4016eedcef451",
