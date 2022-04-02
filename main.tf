@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     discord = {
-      source = "Lucky3028/discord"
-      version = "1.0.8"
+      source  = "aequasi/discord"
+      version = "0.0.4"
     }
   }
 }
@@ -29,6 +29,7 @@ terraform {
 resource "discord_server" "my_server" {
   name              = "gurany_touのサーバー"
   region            = "japan"
+  system_channel_id = "955825994344853537"
 }
 
 

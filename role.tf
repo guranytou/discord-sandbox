@@ -22,7 +22,7 @@ data "discord_color" "blue" {
 resource "discord_role" "bad_role" {
   server_id   = discord_server.my_server.id
   name        = "bad_role"
-  permissions = 4294967296
+  permissions = 0
   color       = data.discord_color.bad.dec
   hoist       = false
   mentionable = true
