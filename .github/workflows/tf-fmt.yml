@@ -2,7 +2,10 @@ name: tf-fmt
 on: [push]
 jobs:
   tf-fmt:
-    runs-on: hashicorp/terraform@1.2.1
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.2.1
       - run: terraform fmt --recursive
