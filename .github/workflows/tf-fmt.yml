@@ -5,4 +5,4 @@ jobs:
     runs-on: hashicorp/terraform:1.2.1
     steps:
       - uses: actions/checkout@v3
-      - run: terraform fmt
+      - run: terraform fmt --recursive

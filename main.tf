@@ -32,5 +32,6 @@ resource "discord_server" "my_server" {
   system_channel_id = "955825994344853537"
 }
 
-
-
+output "server_id" {
+value = discord_server.my_server.server_id
+}
