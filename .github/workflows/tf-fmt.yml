@@ -1,0 +1,8 @@
+name: tf-fmt
+on: [push]
+jobs:
+  tf-fmt:
+    runs-on: hashicorp/terraform:1.2.1
+    steps:
+      - uses: actions/checkout@v3
+      - run: terraform fmt
