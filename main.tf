@@ -33,5 +33,5 @@ resource "discord_server" "my_server" {
 }
 
 output "server_id" {
-value = discord_server.my_server.server_id
+  value = discord_server.my_server.server_id
 }
