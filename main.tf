@@ -1,18 +1,16 @@
 terraform {
   required_providers {
     discord = {
-      source = "Lucky3028/discord"
-      version = "1.0.8"
+      source  = "guranytou/discord"
+      version = "0.0.8"
     }
   }
 }
 
+variable "token" {}
+
 provider "discord" {
   token = var.token
-}
-
-variable "token" {
-  type = string
 }
 
 terraform {
@@ -29,7 +27,7 @@ terraform {
 resource "discord_server" "my_server" {
   name              = "gurany_touのサーバー"
   region            = "japan"
-  # system_channel_id = "955825994344853537"
+  system_channel_id = "955825994344853537"
 }
 
 output "server_id" {
