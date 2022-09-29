@@ -3,12 +3,6 @@ resource "discord_category_channel" "textchannel" {
   server_id = discord_server.my_server.id
 }
 
-resource "discord_text_channel" "testch" {
- name      = "reni_test_channel"
- server_id = discord_server.my_server.id
- category  = discord_category_channel.textchannel.id
-}
-
 resource "discord_text_channel" "general" {
   name      = "general"
   server_id = discord_server.my_server.id

@@ -25,9 +25,8 @@ terraform {
 }
 
 resource "discord_server" "my_server" {
-  name              = "gurany_touのサーバー"
-  region            = "japan"
-  system_channel_id = "955825994344853537"
+  name   = "gurany_touのサーバー"
+  region = "japan"
 }
 
 output "server_id" {
